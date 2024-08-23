@@ -45,10 +45,8 @@ def parse_content(content):
             parsed.append(("header", level, text.strip()))
         elif re.match(r"^(\s*\d+\.|\s*-|\*)\s", line):
             # List item (numbered or bullet)
-            print(line)
             level = len(re.match(r"^\s*", line).group(0)) // 2
             list_type = "numbered" if re.match(r"^\s*\d+\.", line) else "bullet"
-            print(list_type)
             text = re.sub(r"^(\s*\d+\.|\s*-|\*)\s", "", line)
 
             if current_list is None or current_list_type != list_type:
