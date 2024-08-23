@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "md2pptx"
+version = "0.1.0"
+description = ""
+authors = ["Konstantin Meshcheryakov <kmeshcheryakov@klika-tech.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-pptx = "^1.0.2"
+requests = "^2.32.3"
+click = "^8.1.7"
+pytest = "^8.3.2"
+
+[tool.poetry.scripts]
+md2pptx = "md2pptx.cli:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
